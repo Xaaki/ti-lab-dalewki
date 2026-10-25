@@ -1,1 +1,1 @@
-# ti-lab-dalewki
+# ti-lab-dalewski
