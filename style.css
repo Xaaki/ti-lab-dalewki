@@ -20,6 +20,9 @@ body {
     padding: 16px 32px;
     background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
@@ -56,7 +59,7 @@ body {
     font-size: 1.75rem;
 }
 
-/* Karty usług - Zadanie 3 */
+/* Karty usług */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +74,13 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efekt uniesienia karty po najechaniu (Bonus) */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card--highlight {
@@ -107,4 +117,63 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
     color: #4426FF;
+}
+
+/* Tabela cennika (Zadanie 4) */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.price-table th, 
+.price-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.price-table th {
+    background-color: #f1f3f5;
+    text-align: left;
+}
+
+.price-table .num {
+    text-align: right;
+}
+
+/* Stopka (Zadanie 4) */
+.site-footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.site-footer h2 {
+    margin-bottom: 16px;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+}
+
+.site-footer a {
+    color: #6ea8fe;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media query poniżej 600px - RWD (Bonus) */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
